@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Akuhu Games - Asset Store</title>
+  <meta name="description" content="Akuhu Games의 고품질 게임 개발용 에셋 스토어. 스타일라이즈드 셰이더, 스마트 AI 에디터, 로우폴리 3D 모델, 몰입형 오디오 패키지를 만나보세요.">
+  <meta name="author" content="Akuhu Games">
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <div class="container header-inner">
+      <a href="#" class="logo">
+        <div class="logo-icon">A</div>
+        <div class="logo-text">Akuhu <span>Games</span></div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#catalog">에셋 목록</a></li>
+        <li><a href="#about">소개</a></li>
+        <li><a href="#support">고객 지원</a></li>
+      </ul>
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="테마 전환">
+          <i class="fas fa-moon"></i>
+        </button>
+        <a href="https://github.com/Akuhu" class="social-btn" target="_blank">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero container">
+    <h1>Developer Utilities for <span class="gradient">Unity Pipeline</span></h1>
+    <p class="hero-subtitle">
+      Akuhu가 개발한 프로젝트 파이프라인 변환용 자동화 유틸리티 툴킷입니다.
+    </p>
+  </section>
+
+  <!-- Asset Store Catalog Section -->
+  <section class="catalog-section container" id="catalog">
+    <div class="filter-bar" style="justify-content: center; margin-bottom: 40px;">
+      <h2 style="font-size: 1.5rem; font-weight: 700;">배포 툴킷 목록</h2>
+    </div>
+
+    <!-- Dynamic Asset Grid -->
+    <div class="assets-grid" id="assets-grid">
+      <!-- Generated dynamically by app.js -->
+    </div>
+  </section>
+
+  <!-- Asset Details Modal -->
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal-container">
+      <button class="modal-close" id="modal-close">
+        <i class="fas fa-times"></i>
+      </button>
+      <!-- SVG dynamic graphic header representation -->
+      <div class="modal-header-graphic" id="modal-graphic">
+        <!-- SVG injected by JS -->
+      </div>
+      <div class="modal-content">
+        <div class="modal-title-row">
+          <h2 id="modal-title">Asset Title</h2>
+          <div class="modal-price-tag" id="modal-price">$0.00</div>
+        </div>
+        <div class="modal-tags" id="modal-tags">
+          <!-- Tags injected by JS -->
+        </div>
+        <p class="modal-desc" id="modal-desc">
+          에셋 상세 설명이 들어갈 자리입니다.
+        </p>
+        <div class="modal-features">
+          <h4>핵심 특징 (Key Features)</h4>
+          <ul class="features-list" id="modal-features-list">
+            <!-- Features injected by JS -->
+          </ul>
+        </div>
+        <div class="modal-actions">
+          <a id="btn-store" href="#" class="btn-primary" target="_blank">
+            <i class="fab fa-github" style="margin-right: 6px;"></i> GitHub에서 확인하기
+          </a>
+          <button onclick="closeModal()" class="btn-secondary">닫기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- About & Contact Footer -->
+  <footer class="footer-info" id="about">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h4 style="display: flex; align-items: center; gap: 8px;">
+          <span style="background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary)); width: 24px; height: 24px; border-radius: 6px; display: inline-flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 800; color: white;">A</span>
+          Akuhu Games
+        </h4>
+        <p style="margin-top: 15px; max-width: 400px;">
+          Akuhu는 Unity 프로젝트 파이프라인 컨버전(HDRP to URP / Built-in)을 위한 자동화 스크립트 및 에디터 유틸리티를 개발하여 배포합니다.
+        </p>
+      </div>
+      <div class="footer-col" id="support">
+        <h4>리소스 & 도움말</h4>
+        <ul class="footer-links">
+          <li><a href="#"><i class="fas fa-book" style="margin-right: 6px;"></i> 가이드 문서</a></li>
+          <li><a href="https://github.com/Akuhu/Homepage/issues"><i class="fas fa-bug" style="margin-right: 6px;"></i> 이슈 제보</a></li>
+          <li><a href="#"><i class="fas fa-envelope" style="margin-right: 6px;"></i> 비즈니스 문의</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>커뮤니티</h4>
+        <ul class="footer-links">
+          <li><a href="https://discord.gg" target="_blank"><i class="fab fa-discord" style="margin-right: 6px;"></i> Discord 서버</a></li>
+          <li><a href="https://github.com/Akuhu" target="_blank"><i class="fab fa-github" style="margin-right: 6px;"></i> GitHub 프로필</a></li>
+          <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter" style="margin-right: 6px;"></i> Twitter (X)</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container copyright">
+      <p>&copy; 2026 Akuhu Games. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
